@@ -21,19 +21,27 @@ body {
 
 .display {
     display: flex;
-    align-items: center;
-    font-size: 50px;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 5px;
+    overflow: hidden;
+/* 
+    word-wrap: break-word;
+    word-break: break-all; */
+    margin-bottom: 15px;
     width:100%;
     height: 50px;
     background-color: rgb(230, 230, 230);
-    margin-bottom: 15px; 
-    padding: 0 5px;
-    overflow:hidden;
-    direction: rtl;
+
     font-family: "Orbitron";
 }
-
-
+.current-operand {
+    font: larger;
+}
+.previous-operand {
+    color: red;
+}
 
 /* selects all descendents of main-frame */
 .main-frame *  {
@@ -59,7 +67,7 @@ body {
 
 }
 
-.btn.equal {
+.btn#equal {
     grid-row: 4/6;
     grid-column:  4/5
 }
